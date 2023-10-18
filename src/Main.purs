@@ -47,12 +47,27 @@ data Dragon
   | Haku -- 白 / White
 
 
+data Season
+  = Spring -- 春
+  | Summer -- 夏
+  | Autumn -- 秋
+  | Winter -- 冬
+
+
+data Flower
+  = Plum -- 梅
+  | Orchid -- 兰 or 蘭
+  | Chrysanthenium -- 菊
+  | Bamboo -- 竹
+
+
 data Tile
   = Pinzu SuitValue -- Pin / p / Dots / 筒子 / ピン
   | Souzu SuitValue -- Soo / s / Bamboos / Bams, Sōzu / 索子 / ソウ
   | Manzu SuitValue -- Man / m / Characters / Cracks / 萬子 / 万子 / マン / ワン
   | Kaze Wind -- 風牌
   | Sangen Dragon -- 三元牌
+  | Flower Flower -- Shikunshi / 四君子
 
 
 data Kind
