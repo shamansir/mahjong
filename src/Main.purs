@@ -35,21 +35,29 @@ data SuitValue
 
 
 data Wind
-  = North
-  | South
-  | West
-  | East
+  = Shau -- Shā / West 西
+  | Nan -- South 南
+  | Peu -- Pē / North 北
+  | Ton  -- East 東
+
+
+data Dragon
+  = Hatsu -- 發 / Green
+  | Chun -- 中 / Red
+  | Haku -- 白 / White
 
 
 data Tile
-  = Pinzu SuitValue -- Pin / p / Dots
-  | Souzu SuitValue -- Soo / s / Bamboos / Bams, Sōzu
-  | Manzu SuitValue -- Man / m / Characters / Cracks
-  | Wind Wind
+  = Pinzu SuitValue -- Pin / p / Dots / 筒子 / ピン
+  | Souzu SuitValue -- Soo / s / Bamboos / Bams, Sōzu / 索子 / ソウ
+  | Manzu SuitValue -- Man / m / Characters / Cracks / 萬子 / 万子 / マン / ワン
+  | Kaze Wind -- 風牌
+  | Sangen Dragon -- 三元牌
 
 
 data Kind
   = Terminal -- Rōtōhai
+  | Honour -- Jihai / tsūpai / 字牌
   | Simple -- Chunchanpai
 
 
