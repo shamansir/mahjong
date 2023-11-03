@@ -3,12 +3,18 @@ module Tile where
 import Prelude
 
 
+import Data.Set (Set)
+import Data.Set (fromFoldable, toUnfoldable) as Set
+
+
 import Order (class OrdInt, position, intEq, intCompare)
 import Valued (class Valued, valueOf)
 
 
 import Wind (Wind)
+import Wind (winds) as W
 import Dragon (Dragon)
+import Dragon (dragons) as D
 
 
 data SuitValue
@@ -43,6 +49,11 @@ instance Eq SuitValue where eq = intEq
 instance Ord SuitValue where compare = intCompare
 
 
+data WithRed
+    = WithRed
+    | NoRed
+
+
 {-
 data Season
   = Spring -- 春
@@ -67,6 +78,44 @@ data Tile
   | Wind Wind -- Kaze / 風牌
   | Dragon Dragon -- Sangen / 三元牌
   -- | Flower Flower -- Shikunshi / 四君子
+
+
+valuesArr :: WithRed -> Array SuitValue
+valuesArr = Set.toUnfoldable <<< values
+
+
+values :: WithRed -> Set SuitValue
+values = case _ of
+    NoRed -> Set.fromFoldable [ Suit1, Suit2, Suit3, Suit4, Suit5, Suit6, Suit7, Suit8, Suit9 ]
+    WithRed ->  Set.fromFoldable [ Suit1, Suit2, Suit3, Suit4, Suit5Red, Suit6, Suit7, Suit8, Suit9 ]
+
+
+dots :: WithRed -> Set Tile
+dots wr = Set.fromFoldable $ Dots <$> valuesArr wr
+
+
+bamboos :: WithRed -> Set Tile
+bamboos wr = Set.fromFoldable $ Bamboo <$> valuesArr wr
+
+
+characters :: WithRed -> Set Tile
+characters wr = Set.fromFoldable $ Character <$> valuesArr wr
+
+
+winds :: Set Tile
+winds = Set.fromFoldable $ Wind <$> (Set.toUnfoldable W.winds :: Array Wind)
+
+
+dragons :: Set Tile
+dragons = Set.fromFoldable $ Dragon <$> (Set.toUnfoldable D.dragons :: Array Dragon)
+
+
+allTiles :: WithRed -> Set Tile
+allTiles wr = dots wr <> bamboos wr <> characters wr <> winds <> dragons
+
+
+instance Eq Tile where eq = intEq
+instance Ord Tile where compare = intCompare
 
 
 instance OrdInt Tile where
