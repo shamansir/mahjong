@@ -15,6 +15,10 @@ import Wind (Wind)
 import Wind (winds) as W
 import Dragon (Dragon)
 import Dragon (dragons) as D
+import Flower (Flower)
+import Flower (flowers) as F
+import Season (Season)
+import Season (seasons) as S
 
 
 data SuitValue
@@ -54,30 +58,14 @@ data WithRed
     | NoRed
 
 
-{-
-data Season
-  = Spring -- 春
-  | Summer -- 夏
-  | Autumn -- 秋
-  | Winter -- 冬
--}
-
-{-
-data Flower
-  = Plum -- 梅
-  | Orchid -- 兰 or 蘭
-  | Chrysanthenium -- 菊
-  | FBamboo -- 竹
--}
-
-
 data Tile
   = Dots SuitValue -- Chow / Pinzu / Pin / p / Dots / 筒子 / ピン
   | Bamboo SuitValue -- Pung / Souzu / Soo / s / Bamboos / Bams, Sōzu / 索子 / ソウ
   | Character SuitValue -- Kong / Manzu / Man / m / Characters / Cracks / 萬子 / 万子 / マン / ワン
   | Wind Wind -- Kaze / 風牌
   | Dragon Dragon -- Sangen / 三元牌
-  -- | Flower Flower -- Shikunshi / 四君子
+  | Flower Flower -- Shikunshi / 四君子
+  | Season Season
 
 
 valuesArr :: WithRed -> Array SuitValue
@@ -110,8 +98,24 @@ dragons :: Set Tile
 dragons = Set.fromFoldable $ Dragon <$> (Set.toUnfoldable D.dragons :: Array Dragon)
 
 
+flowers :: Set Tile
+flowers = Set.fromFoldable $ Flower <$> (Set.toUnfoldable F.flowers :: Array Flower)
+
+
+seasons :: Set Tile
+seasons = Set.fromFoldable $ Season <$> (Set.toUnfoldable S.seasons :: Array Season)
+
+
 allTiles :: WithRed -> Set Tile
 allTiles wr = dots wr <> bamboos wr <> characters wr <> winds <> dragons
+
+
+allTiles' :: WithRed -> Set Tile
+allTiles' wr = dots wr <> bamboos wr <> characters wr <> winds <> dragons <> flowers
+
+
+allTiles'' :: WithRed -> Set Tile
+allTiles'' wr = dots wr <> bamboos wr <> characters wr <> winds <> dragons <> flowers <> seasons
 
 
 instance Eq Tile where eq = intEq
@@ -125,6 +129,8 @@ instance OrdInt Tile where
     Character suit -> 30 + position suit
     Wind wind -> 40 + position wind
     Dragon dragon -> 50 + position dragon
+    Flower flower -> 60 + position flower
+    Season season -> 70 + position season
 
 
 data Kind
