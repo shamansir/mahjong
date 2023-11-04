@@ -18,6 +18,14 @@ data Stick
   | Stick10000 -- two black dots, between them one red dot surrounded by six small dots
 
 
+instance Show Stick where
+  show = case _ of
+    Stick100 -> "🁫"
+    Stick1000 -> "🂃"
+    Stick5000 -> "🂋"
+    Stick10000 -> "🂓"
+
+
 sticks :: Set Stick
 sticks = Set.fromFoldable [ Stick100, Stick1000, Stick5000, Stick10000 ]
 

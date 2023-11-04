@@ -25,5 +25,12 @@ instance OrdInt Dragon where
     Red -> 2
 
 
+instance Show Dragon where
+  show = case _ of
+    Green -> "🀅"
+    Red -> "🀄"
+    White -> "🀆"
+
+
 instance Eq Dragon where eq = intEq
 instance Ord Dragon where compare = intCompare

@@ -29,5 +29,13 @@ instance OrdInt Flower where
     FBamboo -> 3
 
 
+instance Show Flower where
+  show = case _ of
+    Plum -> "🀢"
+    Orchid -> "🀣"
+    Chrysanthenium -> "🀥"
+    FBamboo -> "🀤"
+
+
 instance Eq Flower where eq = intEq
 instance Ord Flower where compare = intCompare

@@ -29,5 +29,13 @@ instance OrdInt Season where
     Winter -> 3
 
 
+instance Show Season where
+  show = case _ of
+    Spring -> "🀦"
+    Summer -> "🀧"
+    Autumn -> "🀨"
+    Winter -> "🀩"
+
+
 instance Eq Season where eq = intEq
 instance Ord Season where compare = intCompare

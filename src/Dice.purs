@@ -25,6 +25,16 @@ instance Valued Dice where
     Dice6 -> 6
 
 
+instance Show Dice where
+  show = case _ of
+    Dice1 -> "⚀"
+    Dice2 -> "⚁"
+    Dice3 -> "⚂"
+    Dice4 -> "⚃"
+    Dice5 -> "⚄"
+    Dice6 -> "⚅"
+
+
 instance OrdInt Dice where position = valueOf
 instance Eq Dice where eq = intEq
 instance Ord Dice where compare = intCompare

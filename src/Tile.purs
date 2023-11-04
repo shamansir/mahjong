@@ -66,6 +66,48 @@ data Tile
   | Dragon Dragon -- Sangen / 三元牌
   | Flower Flower -- Shikunshi / 四君子
   | Season Season
+  | Jocker -- Baida
+--   | Back
+
+
+instance Show Tile where
+  show = case _ of
+    Dots Suit1 -> "🀙"
+    Dots Suit2 -> "🀚"
+    Dots Suit3 -> "🀛"
+    Dots Suit4 -> "🀜"
+    Dots Suit5 -> "🀝"
+    Dots Suit5Red -> "🀝"
+    Dots Suit6 -> "🀞"
+    Dots Suit7 -> "🀟"
+    Dots Suit8 -> "🀠"
+    Dots Suit9 -> "🀡"
+    Bamboo Suit1 -> "🀐"
+    Bamboo Suit2 -> "🀑"
+    Bamboo Suit3 -> "🀒"
+    Bamboo Suit4 -> "🀓"
+    Bamboo Suit5 -> "🀔"
+    Bamboo Suit5Red -> "🀔"
+    Bamboo Suit6 -> "🀕"
+    Bamboo Suit7 -> "🀖"
+    Bamboo Suit8 -> "🀗"
+    Bamboo Suit9 -> "🀘"
+    Character Suit1 -> "🀇"
+    Character Suit2 -> "🀈"
+    Character Suit3 -> "🀉"
+    Character Suit4 -> "🀊"
+    Character Suit5 -> "🀋"
+    Character Suit5Red -> "🀋"
+    Character Suit6 -> "🀌"
+    Character Suit7 -> "🀍"
+    Character Suit8 -> "🀎"
+    Character Suit9 -> "🀏"
+    Wind wind -> show wind
+    Dragon dragon -> show dragon
+    Flower flower -> show flower
+    Season season -> show season
+    Jocker -> "🀪"
+    -- Back -> "🀫"
 
 
 valuesArr :: WithRed -> Array SuitValue
@@ -131,6 +173,8 @@ instance OrdInt Tile where
     Dragon dragon -> 50 + position dragon
     Flower flower -> 60 + position flower
     Season season -> 70 + position season
+    Jocker -> 80
+    -- Back -> 90
 
 
 data Kind

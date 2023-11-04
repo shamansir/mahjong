@@ -28,6 +28,14 @@ instance OrdInt Wind where
     North -> 3
 
 
+instance Show Wind where
+  show = case _ of
+    East -> "🀀"
+    South -> "🀁"
+    West -> "🀂"
+    North -> "🀃"
+
+
 instance Eq Wind where eq = intEq
 instance Ord Wind where compare = intCompare
 

@@ -32,7 +32,7 @@ tiles wr =
     <> Array.replicate 4 (Set.toUnfoldable $ Tile.characters wr :: Array Tile)
     <> Array.replicate 4 (Set.toUnfoldable $ Tile.winds :: Array Tile)
     <> Array.replicate 4 (Set.toUnfoldable $ Tile.dragons :: Array Tile)
-    <> Array.singleton (Set.toUnfoldable $ Tile.flowers)
+    <> Array.singleton   (Set.toUnfoldable $ Tile.flowers :: Array Tile)
 
 
 flops :: Array Prevalent
