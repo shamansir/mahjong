@@ -10,6 +10,12 @@ import Data.Set (fromFoldable, toUnfoldable) as Set
 import Order (class OrdInt, position, intEq, intCompare)
 import Valued (class Valued, valueOf)
 
+import Game.Hint (class Hint, hint)
+import Game.Doc (class Doc, doc)
+import Game.Pictogram (class HasPicto, picto)
+import Game.Batch (class Batch)
+import Game.Enc (class Enc)
+
 
 import Wind (Wind)
 import Wind (winds) as W
@@ -22,30 +28,44 @@ import Season (seasons) as S
 
 
 data SuitValue
-  = Suit1
-  | Suit2
-  | Suit3
-  | Suit4
-  | Suit5
-  | Suit5Red
-  | Suit6
-  | Suit7
-  | Suit8
-  | Suit9
+  = Value1
+  | Value2
+  | Value3
+  | Value4
+  | Value5
+  | Value5Red
+  | Value6
+  | Value7
+  | Value8
+  | Value9
 
 
 instance Valued SuitValue where
   valueOf = case _ of
-    Suit1 -> 1
-    Suit2 -> 2
-    Suit3 -> 3
-    Suit4 -> 4
-    Suit5 -> 5
-    Suit5Red -> 5
-    Suit6 -> 6
-    Suit7 -> 7
-    Suit8 -> 8
-    Suit9 -> 9
+    Value1 -> 1
+    Value2 -> 2
+    Value3 -> 3
+    Value4 -> 4
+    Value5 -> 5
+    Value5Red -> 5
+    Value6 -> 6
+    Value7 -> 7
+    Value8 -> 8
+    Value9 -> 9
+
+
+instance Hint SuitValue where
+  hint = case _ of
+    Value1 -> ":1:"
+    Value2 -> ":2:"
+    Value3 -> ":3:"
+    Value4 -> ":4:"
+    Value5 -> ":5:"
+    Value5Red -> ":5:"
+    Value6 -> ":6:"
+    Value7 -> ":7:"
+    Value8 -> ":8:"
+    Value9 -> ":9:"
 
 
 instance OrdInt SuitValue where position = valueOf
@@ -56,6 +76,41 @@ instance Ord SuitValue where compare = intCompare
 data WithRed
     = WithRed
     | NoRed
+
+
+data Suit
+  = DotsS
+  | BambooS
+  | CharacterS
+  | WindS
+  | DragonS
+  | FlowerS
+  | SeasonS
+  | JockerS
+
+
+instance Hint Suit where
+  hint = case _ of
+    DotsS -> "*.*"
+    BambooS -> "*B*"
+    CharacterS -> "*C*"
+    WindS -> "*W*"
+    DragonS -> "*D*"
+    FlowerS -> "*F*"
+    SeasonS -> "*S*"
+    JockerS -> "*J*"
+
+
+instance Doc Suit where
+  doc = case _ of
+    DotsS -> "Dots; Chow / Pinzu / Pin / p / Dots / 筒子 / ピン"
+    BambooS -> "Bamboo; Pung / Souzu / Soo / s / Bamboos / Bams, Sōzu / 索子 / ソウ"
+    CharacterS -> "Character; Kong / Manzu / Man / m / Characters / Cracks / 萬子 / 万子 / マン / ワン"
+    WindS -> "Wind; Kaze / 風牌"
+    DragonS -> "Dragon; Sangen / 三元牌"
+    FlowerS -> "Flower; Shikunshi / 四君子"
+    SeasonS -> "Season;"
+    JockerS -> "Jocker; Baida"
 
 
 data Tile
@@ -70,44 +125,81 @@ data Tile
 --   | Back
 
 
-instance Show Tile where
-  show = case _ of
-    Dots Suit1 -> "🀙"
-    Dots Suit2 -> "🀚"
-    Dots Suit3 -> "🀛"
-    Dots Suit4 -> "🀜"
-    Dots Suit5 -> "🀝"
-    Dots Suit5Red -> "🀝"
-    Dots Suit6 -> "🀞"
-    Dots Suit7 -> "🀟"
-    Dots Suit8 -> "🀠"
-    Dots Suit9 -> "🀡"
-    Bamboo Suit1 -> "🀐"
-    Bamboo Suit2 -> "🀑"
-    Bamboo Suit3 -> "🀒"
-    Bamboo Suit4 -> "🀓"
-    Bamboo Suit5 -> "🀔"
-    Bamboo Suit5Red -> "🀔"
-    Bamboo Suit6 -> "🀕"
-    Bamboo Suit7 -> "🀖"
-    Bamboo Suit8 -> "🀗"
-    Bamboo Suit9 -> "🀘"
-    Character Suit1 -> "🀇"
-    Character Suit2 -> "🀈"
-    Character Suit3 -> "🀉"
-    Character Suit4 -> "🀊"
-    Character Suit5 -> "🀋"
-    Character Suit5Red -> "🀋"
-    Character Suit6 -> "🀌"
-    Character Suit7 -> "🀍"
-    Character Suit8 -> "🀎"
-    Character Suit9 -> "🀏"
-    Wind wind -> show wind
-    Dragon dragon -> show dragon
-    Flower flower -> show flower
-    Season season -> show season
+instance HasPicto Tile where
+  picto = case _ of
+    Dots Value1 -> "🀙"
+    Dots Value2 -> "🀚"
+    Dots Value3 -> "🀛"
+    Dots Value4 -> "🀜"
+    Dots Value5 -> "🀝"
+    Dots Value5Red -> "🀝"
+    Dots Value6 -> "🀞"
+    Dots Value7 -> "🀟"
+    Dots Value8 -> "🀠"
+    Dots Value9 -> "🀡"
+    Bamboo Value1 -> "🀐"
+    Bamboo Value2 -> "🀑"
+    Bamboo Value3 -> "🀒"
+    Bamboo Value4 -> "🀓"
+    Bamboo Value5 -> "🀔"
+    Bamboo Value5Red -> "🀔"
+    Bamboo Value6 -> "🀕"
+    Bamboo Value7 -> "🀖"
+    Bamboo Value8 -> "🀗"
+    Bamboo Value9 -> "🀘"
+    Character Value1 -> "🀇"
+    Character Value2 -> "🀈"
+    Character Value3 -> "🀉"
+    Character Value4 -> "🀊"
+    Character Value5 -> "🀋"
+    Character Value5Red -> "🀋"
+    Character Value6 -> "🀌"
+    Character Value7 -> "🀍"
+    Character Value8 -> "🀎"
+    Character Value9 -> "🀏"
+    Wind wind -> picto wind
+    Dragon dragon -> picto dragon
+    Flower flower -> picto flower
+    Season season -> picto season
     Jocker -> "🀪"
     -- Back -> "🀫"
+
+
+
+instance Hint Tile where
+  hint = case _ of
+    Dots sv -> "+D" <> show (valueOf sv) <> "+"
+    Bamboo sv -> "+B" <> show (valueOf sv) <> "+"
+    Character sv -> "+C" <> show (valueOf sv) <> "+"
+    Wind w -> hint w
+    Dragon d -> hint d
+    Flower f -> hint f
+    Season s -> hint s
+    Jocker -> "+J+"
+
+
+instance Doc Tile where
+  doc = case _ of
+    Dots sv -> "Dots (筒子 / ピン) of value " <> show (valueOf sv)
+    Bamboo sv -> "Bamboos (索子 / ソウ) of value " <> show (valueOf sv)
+    Character sv -> "Characters (萬子 / マン) of value " <> show (valueOf sv)
+    Wind w -> doc w
+    Dragon d -> doc d
+    Flower f -> doc f
+    Season s -> doc s
+    Jocker -> "Jocker"
+
+
+suitOf :: Tile -> Suit
+suitOf = case _ of
+  Dots _ -> DotsS
+  Bamboo _ -> BambooS
+  Character _ -> CharacterS
+  Wind _ -> WindS
+  Dragon _ -> DragonS
+  Flower _ -> FlowerS
+  Season _ -> SeasonS
+  Jocker -> JockerS
 
 
 valuesArr :: WithRed -> Array SuitValue
@@ -116,8 +208,8 @@ valuesArr = Set.toUnfoldable <<< values
 
 values :: WithRed -> Set SuitValue
 values = case _ of
-    NoRed -> Set.fromFoldable [ Suit1, Suit2, Suit3, Suit4, Suit5, Suit6, Suit7, Suit8, Suit9 ]
-    WithRed ->  Set.fromFoldable [ Suit1, Suit2, Suit3, Suit4, Suit5Red, Suit6, Suit7, Suit8, Suit9 ]
+    NoRed -> Set.fromFoldable [ Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9 ]
+    WithRed ->  Set.fromFoldable [ Value1, Value2, Value3, Value4, Value5Red, Value6, Value7, Value8, Value9 ]
 
 
 dots :: WithRed -> Set Tile
@@ -160,6 +252,14 @@ allTiles'' :: WithRed -> Set Tile
 allTiles'' wr = dots wr <> bamboos wr <> characters wr <> winds <> dragons <> flowers <> seasons
 
 
+instance Batch Tile where
+  all = allTiles'' NoRed
+
+
+instance Enc Tile where
+  encode = hint
+
+
 instance Eq Tile where eq = intEq
 instance Ord Tile where compare = intCompare
 
@@ -181,3 +281,23 @@ data Kind
   = Terminal -- Rōtōhai
   | Honour -- Jihai / tsūpai / 字牌 : Four Winds and Three Dragons
   | Simple -- Chunchanpai : Suits + Values
+
+
+instance Doc Kind where
+  doc = case _ of
+    Terminal -> "Teminal; Rōtōhai"
+    Honour -> "Honour; Jihai / tsūpai / 字牌 : Four Winds and Three Dragons"
+    Simple -> "Simple; Chunchanpai : Suits + Values"
+
+
+-- FIXME : implement properly
+kindOf :: Tile -> Kind
+kindOf = case _ of
+  Dots _ -> Simple
+  Bamboo _ -> Simple
+  Character _ -> Simple
+  Wind _ -> Honour
+  Dragon _ -> Honour
+  Flower _ -> Terminal
+  Season _ -> Terminal
+  Jocker -> Terminal
