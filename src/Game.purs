@@ -4,12 +4,25 @@ import Prelude
 
 import Data.Array as Array
 import Data.Set as Set
+import Data.Maybe (Maybe(..))
+import Data.Tuple.Nested (type (/\), (/\))
 
 import Dice (Dice(..))
 import Stick (Stick(..))
 import Tile (Tile(..), WithRed(..))
 import Tile (dots, bamboos, characters, winds, dragons, flowers) as Tile
 import Wind (Wind(..), Prevalent(..))
+
+import Game.Hand (Hand)
+import Game.ByWind (ByWind)
+
+
+data Game = Game
+    { hands :: ByWind (Hand /\ Array Stick)
+    , deadWall :: Array Tile -- Vec tilesleft Tile
+    , curTile :: Maybe Tile
+    , dices :: Dice /\ Dice
+    }
 
 
 dices :: Array Dice
