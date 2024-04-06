@@ -7,15 +7,17 @@ import Effect (Effect)
 import Data.Array (length) as Array
 import Data.Traversable (traverse_)
 import Data.String (joinWith) as String
+import Data.Newtype (unwrap)
 
-import Game (tiles)
+import Game (tiles, tilesEx, reds)
 import Tile (Tile, WithRed(..))
 import Game.Pictogram (picto)
 import Game.Hint (hint)
 import Game.Doc (doc)
 
+import Render.CssBind (cssClass)
 
-import Specular.Dom.Element (attr,  class_, dynText, el, onClick_, text)
+import Specular.Dom.Element (attr,  class_, dynText, el, onClick_, text, el')
 import Specular.Dom.Widget (runMainWidgetInBody)
 import Specular.Ref (Ref)
 import Specular.Ref as Ref
@@ -42,16 +44,21 @@ main = do
 
     el "hr" [] $ pure unit
 
+    el "div" [ class_ "tiles" ] do
+      traverse_ tileImg $ tilesEx NoRed <> reds
+
+    el "hr" [] $ pure unit
+
     el "textarea" [ class_ "list" ] do
-      text $ String.joinWith "\n" $ tileOneLiner <$> tiles NoRed
+      text $ String.joinWith "\n" $ tileOneLiner <$> tilesEx NoRed
 
     el "hr" [] $ pure unit
 
     el "span" [] do
       text $ show $ Array.length $ tiles NoRed
 
-    el "hr" [] $ pure unit
-
   where
+    tileImg tile = el "span" [ class_ $ unwrap $ cssClass tile ] $ pure unit
+
     tileOneLiner :: Tile -> String
     tileOneLiner tile = picto tile <> " | " <> hint tile <> " | " <> doc tile

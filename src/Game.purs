@@ -10,7 +10,7 @@ import Data.Tuple.Nested (type (/\), (/\))
 import Dice (Dice(..))
 import Stick (Stick(..))
 import Tile (Tile(..), WithRed(..))
-import Tile (dots, bamboos, characters, winds, dragons, flowers) as Tile
+import Tile (dots, bamboos, characters, winds, dragons, flowers, seasons, reds) as Tile
 import Wind (Wind(..), Prevalent(..))
 import Player (Player)
 
@@ -59,7 +59,14 @@ tiles wr =
 
 tilesEx :: WithRed -> Array Tile
 tilesEx wr =
-    tiles wr <> (Set.toUnfoldable $ Tile.flowers :: Array Tile)
+    tiles wr <> Array.concat
+        (  Array.replicate 4 (Set.toUnfoldable $ Tile.flowers :: Array Tile)
+        <> Array.replicate 4 (Set.toUnfoldable $ Tile.seasons :: Array Tile)
+        )
+
+
+reds :: Array Tile
+reds = Set.toUnfoldable Tile.reds
 
 
 flops :: Array Prevalent

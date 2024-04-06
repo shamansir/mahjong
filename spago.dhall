@@ -18,6 +18,7 @@ to generate this file without the comments in this block.
   , "foldable-traversable"
   , "halogen"
   , "maybe"
+  , "newtype"
   , "ordered-collections"
   , "prelude"
   , "sized-vectors"

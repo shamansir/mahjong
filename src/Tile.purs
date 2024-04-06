@@ -5,7 +5,7 @@ import Prelude
 
 import Data.Set (Set)
 import Data.Set (fromFoldable, toUnfoldable) as Set
-
+import Data.Newtype (wrap)
 
 import Order (class OrdInt, position, intEq, intCompare)
 import Valued (class Valued, valueOf)
@@ -210,6 +210,10 @@ values :: WithRed -> Set SuitValue
 values = case _ of
     NoRed -> Set.fromFoldable [ Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9 ]
     WithRed ->  Set.fromFoldable [ Value1, Value2, Value3, Value4, Value5Red, Value6, Value7, Value8, Value9 ]
+
+
+reds :: Set Tile
+reds = Set.fromFoldable [ Dots Value5Red, Bamboo Value5Red, Character Value5Red ]
 
 
 dots :: WithRed -> Set Tile
