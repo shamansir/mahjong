@@ -16,9 +16,14 @@ to generate this file without the comments in this block.
   , "console"
   , "effect"
   , "foldable-traversable"
+  , "halogen"
   , "maybe"
   , "ordered-collections"
   , "prelude"
+  , "sized-vectors"
+  , "specular"
+  , "tuples"
+  , "typelevel"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
