@@ -12,9 +12,17 @@ import Stick (Stick(..))
 import Tile (Tile(..), WithRed(..))
 import Tile (dots, bamboos, characters, winds, dragons, flowers) as Tile
 import Wind (Wind(..), Prevalent(..))
+import Player (Player)
 
 import Game.Hand (Hand)
 import Game.ByWind (ByWind)
+
+
+data Phase
+    = Pre
+    | EastPhase Player
+    | SouthPhase Player
+    | Done
 
 
 data Game = Game
@@ -22,6 +30,8 @@ data Game = Game
     , deadWall :: Array Tile -- Vec tilesleft Tile
     , curTile :: Maybe Tile
     , dices :: Dice /\ Dice
+    , phase :: Phase
+    , players :: ByWind Player
     }
 
 

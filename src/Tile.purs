@@ -293,11 +293,17 @@ instance Doc Kind where
 -- FIXME : implement properly
 kindOf :: Tile -> Kind
 kindOf = case _ of
+  Dots Value1 -> Terminal
+  Dots Value9 -> Terminal
+  Bamboo Value1 -> Terminal
+  Bamboo Value9 -> Terminal
+  Character Value1 -> Terminal
+  Character Value9 -> Terminal
   Dots _ -> Simple
   Bamboo _ -> Simple
   Character _ -> Simple
   Wind _ -> Honour
   Dragon _ -> Honour
-  Flower _ -> Terminal
-  Season _ -> Terminal
-  Jocker -> Terminal
+  Flower _ -> Honour -- ?
+  Season _ -> Honour -- ?
+  Jocker -> Honour -- ?
