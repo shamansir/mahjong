@@ -1,0 +1,68 @@
+.set-colored {
+    --offset-x : 50px;
+    --tile-offset-x: -140px;
+    --tile-offset-y: -200px;
+}
+
+.set-colored span.tile {
+    width: 140px;
+    height: 200px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.set-colored span.tile {
+    background-image: url('./assets/full_set.png');
+}
+
+.set-colored .dots-1 { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+.set-colored .dots-2 { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+.set-colored .dots-3 { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+.set-colored .dots-4 { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+.set-colored .dots-5 { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+.set-colored .dots-6 { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+.set-colored .dots-7 { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+.set-colored .dots-8 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+.set-colored .dots-9 { background-position: calc(var(--offset-x) + 9 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+.set-colored .dots-5-red { background-position: calc(var(--offset-x) + 10 * var(--tile-offset-x)) calc(1 * var(--tile-offset-y)); }
+
+.set-colored .bamboos-1 { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+.set-colored .bamboos-2 { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+.set-colored .bamboos-3 { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+.set-colored .bamboos-4 { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+.set-colored .bamboos-5 { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+.set-colored .bamboos-6 { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+.set-colored .bamboos-7 { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+.set-colored .bamboos-8 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+.set-colored .bamboos-9 { background-position: calc(var(--offset-x) + 9 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+.set-colored .bamboos-5-red { background-position: calc(var(--offset-x) + 10 * var(--tile-offset-x)) calc(2 * var(--tile-offset-y)); }
+
+.set-colored .chars-1 { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+.set-colored .chars-2 { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+.set-colored .chars-3 { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+.set-colored .chars-4 { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+.set-colored .chars-5 { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+.set-colored .chars-6 { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+.set-colored .chars-7 { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+.set-colored .chars-8 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+.set-colored .chars-9 { background-position: calc(var(--offset-x) + 9 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+.set-colored .chars-5-red { background-position: calc(var(--offset-x) + 10 * var(--tile-offset-x)) calc(0 * var(--tile-offset-y)); }
+
+.set-colored .wind-east  { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(3 * var(--tile-offset-y)); }
+.set-colored .wind-south { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(3 * var(--tile-offset-y)); }
+.set-colored .wind-west  { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(3 * var(--tile-offset-y)); }
+.set-colored .wind-north { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(3 * var(--tile-offset-y)); }
+
+.set-colored .dragon-white { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(3 * var(--tile-offset-y)); }
+.set-colored .dragon-green { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(3 * var(--tile-offset-y)); }
+.set-colored .dragon-red   { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(3 * var(--tile-offset-y)); }
+
+.set-colored .flower-plum          { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(5 * var(--tile-offset-y)); }
+.set-colored .flower-orchid        { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(5 * var(--tile-offset-y)); }
+.set-colored .flower-chrysantenium { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(5 * var(--tile-offset-y)); }
+.set-colored .flower-bamboo        { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(5 * var(--tile-offset-y)); }
+
+.set-colored .season-winter { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(5 * var(--tile-offset-y)); }
+.set-colored .season-spring { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(5 * var(--tile-offset-y)); }
+.set-colored .season-summer { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(5 * var(--tile-offset-y)); }
+.set-colored .season-autumn { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(5 * var(--tile-offset-y)); }

@@ -1,0 +1,78 @@
+/* .set-des-a {
+    --offset-x : 80px;
+    --tile-offset-x: -155px;
+    --tile-offset-y: -100px;
+} */
+
+.set-des-a {
+    --offset-x : -74px;
+    --offset-y : -100px;
+    --tile-offset-x: -157px;
+    --tile-offset-y: -200px;
+}
+
+.set-des-a span.tile {
+    width: 160px;
+    height: 200px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.set-des-a span.tile {
+    background-image: url('./assets/set_v1.png');
+}
+
+.set-des-a .dots-1 { background-position: calc(var(--offset-x) + 0 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-a .dots-2 { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-a .dots-3 { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-a .dots-4 { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-a .dots-5 { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-a .dots-6 { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-a .dots-7 { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-a .dots-8 { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-a .dots-9 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+
+.set-des-a .bamboos-1 { background-position: calc(var(--offset-x) + 0 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-a .bamboos-2 { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-a .bamboos-3 { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-a .bamboos-4 { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-a .bamboos-5 { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-a .bamboos-6 { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-a .bamboos-7 { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-a .bamboos-8 { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-a .bamboos-9 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+
+.set-des-a .chars-1 { background-position: calc(var(--offset-x) + 0 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-a .chars-2 { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-a .chars-3 { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-a .chars-4 { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-a .chars-5 { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-a .chars-6 { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-a .chars-7 { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-a .chars-8 { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-a .chars-9 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+
+.set-des-a .wind-east  { background-position: calc(var(--offset-x) + 0 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-a .wind-south { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-a .wind-west  { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-a .wind-north { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+
+.set-des-a .dragon-white { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-a .dragon-green { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-a .dragon-red   { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+
+.set-des-a .back { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+
+.set-des-a .tile.dots-5-red    { background-image: none; }
+.set-des-a .tile.bamboos-5-red { background-image: none; }
+.set-des-a .tile.chars-5-red   { background-image: none; }
+
+.set-des-a .tile.flower-plum          { background-image: none; }
+.set-des-a .tile.flower-orchid        { background-image: none; }
+.set-des-a .tile.flower-chrysantenium { background-image: none; }
+.set-des-a .tile.flower-bamboo        { background-image: none; }
+
+.set-des-a .tile.season-winter { background-image: none; }
+.set-des-a .tile.season-spring { background-image: none; }
+.set-des-a .tile.season-summer { background-image: none; }
+.set-des-a .tile.season-autumn { background-image: none; }

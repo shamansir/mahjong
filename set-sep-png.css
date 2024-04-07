@@ -1,0 +1,69 @@
+.set-sep-png {
+    --offset-x : -5px;
+    --offset-y : -30px;
+    --tile-offset-x: -160px;
+    --tile-offset-y: -245px;
+}
+
+.set-sep-png span.tile {
+    width: 160px;
+    height: 200px;
+    display: inline-block;
+    border: 1px solid black;
+    background-size: 160px 200px;
+    background-position: center;
+}
+
+.set-sep-png .dots-1 { background-image: url('./assets/PNG1/Regular/Pin1.png'); }
+.set-sep-png .dots-2 { background-image: url('./assets/PNG1/Regular/Pin2.png'); }
+.set-sep-png .dots-3 { background-image: url('./assets/PNG1/Regular/Pin3.png'); }
+.set-sep-png .dots-4 { background-image: url('./assets/PNG1/Regular/Pin4.png'); }
+.set-sep-png .dots-5 { background-image: url('./assets/PNG1/Regular/Pin5.png'); }
+.set-sep-png .dots-6 { background-image: url('./assets/PNG1/Regular/Pin6.png'); }
+.set-sep-png .dots-7 { background-image: url('./assets/PNG1/Regular/Pin7.png'); }
+.set-sep-png .dots-8 { background-image: url('./assets/PNG1/Regular/Pin8.png'); }
+.set-sep-png .dots-9 { background-image: url('./assets/PNG1/Regular/Pin9.png'); }
+.set-sep-png .dots-5-red { background-image: url('./assets/PNG1/Regular/Pin5-Dora.png'); }
+
+.set-sep-png .bamboos-1 { background-image: url('./assets/PNG1/Regular/Sou1.png'); }
+.set-sep-png .bamboos-2 { background-image: url('./assets/PNG1/Regular/Sou2.png'); }
+.set-sep-png .bamboos-3 { background-image: url('./assets/PNG1/Regular/Sou3.png'); }
+.set-sep-png .bamboos-4 { background-image: url('./assets/PNG1/Regular/Sou4.png'); }
+.set-sep-png .bamboos-5 { background-image: url('./assets/PNG1/Regular/Sou5.png'); }
+.set-sep-png .bamboos-6 { background-image: url('./assets/PNG1/Regular/Sou6.png'); }
+.set-sep-png .bamboos-7 { background-image: url('./assets/PNG1/Regular/Sou7.png'); }
+.set-sep-png .bamboos-8 { background-image: url('./assets/PNG1/Regular/Sou8.png'); }
+.set-sep-png .bamboos-9 { background-image: url('./assets/PNG1/Regular/Sou9.png'); }
+.set-sep-png .bamboos-5-red { background-image: url('./assets/PNG1/Regular/Sou5-Dora.png'); }
+
+.set-sep-png .chars-1 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-2 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-3 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-4 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-5 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-6 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-7 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-8 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-9 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-5-red { background-image: url('./assets/PNG1/Regular/Man5-Dora.png'); }
+
+.set-sep-png .wind-east  { background-image: url('./assets/PNG1/Regular/Ton.png'); }
+.set-sep-png .wind-south { background-image: url('./assets/PNG1/Regular/Nan.png'); }
+.set-sep-png .wind-west  { background-image: url('./assets/PNG1/Regular/Shaa.png'); }
+.set-sep-png .wind-north { background-image: url('./assets/PNG1/Regular/Pei.png'); }
+
+.set-sep-png .dragon-white { background-image: url('./assets/PNG1/Regular/Haku.png'); }
+.set-sep-png .dragon-green { background-image: url('./assets/PNG1/Regular/Hatsu.png'); }
+.set-sep-png .dragon-red   { background-image: url('./assets/PNG1/Regular/Chun.png'); }
+
+.set-sep-png .back { background-image: url('./assets/PNG1/Regular/Back.png'); }
+
+.set-sep-png .tile.flower-plum          { background-image: url('./assets/PNG1/Regular/Flower1.png'); }
+.set-sep-png .tile.flower-orchid        { background-image: url('./assets/PNG1/Regular/Flower2.png'); }
+.set-sep-png .tile.flower-chrysantenium { background-image: url('./assets/PNG1/Regular/Flower3.png'); }
+.set-sep-png .tile.flower-bamboo        { background-image: url('./assets/PNG1/Regular/Flower4.png'); }
+
+.set-sep-png .tile.season-winter { background-image: url('./assets/PNG1/Regular/Season1.png'); }
+.set-sep-png .tile.season-spring { background-image: url('./assets/PNG1/Regular/Season2.png'); }
+.set-sep-png .tile.season-summer { background-image: url('./assets/PNG1/Regular/Season3.png'); }
+.set-sep-png .tile.season-autumn { background-image: url('./assets/PNG1/Regular/Season4.png'); }

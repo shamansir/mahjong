@@ -1,0 +1,72 @@
+.set-des-b {
+    --offset-x : -85px;
+    --offset-y : -140px;
+    --tile-offset-x: -160px;
+    --tile-offset-y: -220px;
+}
+
+.set-des-b span.tile {
+    width: 160px;
+    height: 200px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.set-des-b span.tile {
+    background-image: url('./assets/set_v2.png');
+}
+
+.set-des-b .dots-1 { background-position: calc(var(--offset-x) + 0 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-b .dots-2 { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-b .dots-3 { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-b .dots-4 { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-b .dots-5 { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-b .dots-6 { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-b .dots-7 { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-b .dots-8 { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+.set-des-b .dots-9 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(var(--offset-y) + 0 * var(--tile-offset-y)); }
+
+.set-des-b .bamboos-1 { background-position: calc(var(--offset-x) + 0 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-b .bamboos-2 { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-b .bamboos-3 { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-b .bamboos-4 { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-b .bamboos-5 { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-b .bamboos-6 { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-b .bamboos-7 { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-b .bamboos-8 { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+.set-des-b .bamboos-9 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(var(--offset-y) + 2 * var(--tile-offset-y)); }
+
+.set-des-b .chars-1 { background-position: calc(var(--offset-x) + 0 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-b .chars-2 { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-b .chars-3 { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-b .chars-4 { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-b .chars-5 { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-b .chars-6 { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-b .chars-7 { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-b .chars-8 { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+.set-des-b .chars-9 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x)) calc(var(--offset-y) + 1 * var(--tile-offset-y)); }
+
+.set-des-b .wind-east  { background-position: calc(var(--offset-x) + 0 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-b .wind-south { background-position: calc(var(--offset-x) + 1 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-b .wind-west  { background-position: calc(var(--offset-x) + 2 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-b .wind-north { background-position: calc(var(--offset-x) + 3 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+
+.set-des-b .dragon-white { background-position: calc(var(--offset-x) + 4 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-b .dragon-green { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+.set-des-b .dragon-red   { background-position: calc(var(--offset-x) + 6 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+
+.set-des-b .back { background-position: calc(var(--offset-x) + 7 * var(--tile-offset-x)) calc(var(--offset-y) + 3 * var(--tile-offset-y)); }
+
+.set-des-b .tile.dots-5-red    { background-image: none; }
+.set-des-b .tile.bamboos-5-red { background-image: none; }
+.set-des-b .tile.chars-5-red   { background-image: none; }
+
+.set-des-b .tile.flower-plum          { background-image: none; }
+.set-des-b .tile.flower-orchid        { background-image: none; }
+.set-des-b .tile.flower-chrysantenium { background-image: none; }
+.set-des-b .tile.flower-bamboo        { background-image: none; }
+
+.set-des-b .tile.season-winter { background-image: none; }
+.set-des-b .tile.season-spring { background-image: none; }
+.set-des-b .tile.season-summer { background-image: none; }
+.set-des-b .tile.season-autumn { background-image: none; }

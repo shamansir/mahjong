@@ -15,9 +15,29 @@ newtype CssClass = CssClass String
 
 derive instance Newtype CssClass _
 
+data DesignSet
+    = BlackWhite
+    | Colored
+    | DesignA
+    -- | DesignB
+    | DesignC
+    | SepSVG
+    | SepPNG
+
 
 class CssBind a where
     cssClass :: a -> CssClass
+
+
+instance CssBind DesignSet where
+  cssClass ds = wrap $ "set-" <> case ds of
+    BlackWhite -> "bw"
+    Colored -> "colored"
+    DesignA -> "des-a"
+    -- DesignB -> "des-b"
+    DesignC -> "des-c"
+    SepSVG -> "sep-svg"
+    SepPNG -> "sep-png"
 
 
 instance CssBind Tile where

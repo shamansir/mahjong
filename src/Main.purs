@@ -15,7 +15,7 @@ import Game.Pictogram (picto)
 import Game.Hint (hint)
 import Game.Doc (doc)
 
-import Render.CssBind (cssClass)
+import Render.CssBind (cssClass, DesignSet(..))
 
 import Specular.Dom.Element (attr,  class_, dynText, el, onClick_, text, el')
 import Specular.Dom.Widget (runMainWidgetInBody)
@@ -44,7 +44,7 @@ main = do
 
     el "hr" [] $ pure unit
 
-    el "div" [ class_ "tiles" ] do
+    el "div" [ class_ $ "tiles " <> (unwrap $ cssClass SepSVG) ] do
       traverse_ tileImg $ tilesEx NoRed <> reds
 
     el "hr" [] $ pure unit
