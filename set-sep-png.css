@@ -37,14 +37,14 @@
 .set-sep-png .bamboos-5-red { background-image: url('./assets/PNG1/Regular/Sou5-Dora.png'); }
 
 .set-sep-png .chars-1 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
-.set-sep-png .chars-2 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
-.set-sep-png .chars-3 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
-.set-sep-png .chars-4 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
-.set-sep-png .chars-5 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
-.set-sep-png .chars-6 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
-.set-sep-png .chars-7 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
-.set-sep-png .chars-8 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
-.set-sep-png .chars-9 { background-image: url('./assets/PNG1/Regular/Man1.png'); }
+.set-sep-png .chars-2 { background-image: url('./assets/PNG1/Regular/Man2.png'); }
+.set-sep-png .chars-3 { background-image: url('./assets/PNG1/Regular/Man3.png'); }
+.set-sep-png .chars-4 { background-image: url('./assets/PNG1/Regular/Man4.png'); }
+.set-sep-png .chars-5 { background-image: url('./assets/PNG1/Regular/Man5.png'); }
+.set-sep-png .chars-6 { background-image: url('./assets/PNG1/Regular/Man6.png'); }
+.set-sep-png .chars-7 { background-image: url('./assets/PNG1/Regular/Man7.png'); }
+.set-sep-png .chars-8 { background-image: url('./assets/PNG1/Regular/Man8.png'); }
+.set-sep-png .chars-9 { background-image: url('./assets/PNG1/Regular/Man9.png'); }
 .set-sep-png .chars-5-red { background-image: url('./assets/PNG1/Regular/Man5-Dora.png'); }
 
 .set-sep-png .wind-east  { background-image: url('./assets/PNG1/Regular/Ton.png'); }
@@ -67,3 +67,11 @@
 .set-sep-png .tile.season-spring { background-image: url('./assets/PNG1/Regular/Season2.png'); }
 .set-sep-png .tile.season-summer { background-image: url('./assets/PNG1/Regular/Season3.png'); }
 .set-sep-png .tile.season-autumn { background-image: url('./assets/PNG1/Regular/Season4.png'); }
+
+.set-sep-png .prev-east  { background-image: none; }
+.set-sep-png .prev-south { background-image: none; }
+
+.set-sep-png .stick-100   { background-image: none; }
+.set-sep-png .stick-1000  { background-image: none; }
+.set-sep-png .stick-5000  { background-image: none; }
+.set-sep-png .stick-10000 { background-image: none; }

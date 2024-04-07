@@ -9,16 +9,41 @@
     --offset-y : -100px;
     --tile-offset-x: -157px;
     --tile-offset-y: -200px;
+    --tile-width: 160px;
+    --tile-height: 200px;
+    --wind-width: 240px;
+    --wind-height: 150px;
+    --stick-width: 50px;
+    --stick-padding: 9px;
+    --stick-x-width: calc(var(--stick-width) + var(--stick-padding));
+    --stick-y-offset: 8px;
+    --stick-height: 260px;
 }
 
 .set-des-a span.tile {
-    width: 160px;
-    height: 200px;
+    width: var(--tile-width);
+    height: var(--tile-height);
     display: inline-block;
     border: 1px solid black;
 }
 
 .set-des-a span.tile {
+    background-image: url('./assets/set_v1.png');
+}
+
+.set-des-a .prev {
+    width: var(--wind-width);
+    height: var(--wind-height);
+    display: inline-block;
+    border: 1px solid black;
+    background-image: url('./assets/set_v1.png');
+}
+
+.set-des-a .stick {
+    width: var(--stick-width);
+    height: var(--stick-height);
+    display: inline-block;
+    border: 1px solid black;
     background-image: url('./assets/set_v1.png');
 }
 
@@ -76,3 +101,11 @@
 .set-des-a .tile.season-spring { background-image: none; }
 .set-des-a .tile.season-summer { background-image: none; }
 .set-des-a .tile.season-autumn { background-image: none; }
+
+.set-des-a .prev-east  { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x) + 5px) calc(var(--offset-y) + 4 * var(--tile-offset-y)); }
+.set-des-a .prev-south { background-position: calc(var(--offset-x) + 5 * var(--tile-offset-x) + 5px - var(--wind-width)) calc(var(--offset-y) + 4 * var(--tile-offset-y)); }
+
+.set-des-a .stick-10000 { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x) - var(--stick-padding) - 0 * var(--stick-x-width)) calc(var(--offset-y) + 3 * var(--tile-offset-y) - var(--stick-y-offset)); }
+.set-des-a .stick-5000  { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x) - var(--stick-padding) - 1 * var(--stick-x-width)) calc(var(--offset-y) + 3 * var(--tile-offset-y) - var(--stick-y-offset)); }
+.set-des-a .stick-1000  { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x) - var(--stick-padding) - 2 * var(--stick-x-width)) calc(var(--offset-y) + 3 * var(--tile-offset-y) - var(--stick-y-offset)); }
+.set-des-a .stick-100   { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x) - var(--stick-padding) - 3 * var(--stick-x-width)) calc(var(--offset-y) + 3 * var(--tile-offset-y) - var(--stick-y-offset)); }

@@ -5,11 +5,12 @@ import Prelude
 import Data.Newtype (class Newtype, wrap)
 
 import Valued (valueOf)
-import Tile (Tile(..), SuitValue(..))
-import Wind (Wind(..))
+import Tile (Tile(..), Back(..), SuitValue(..))
+import Wind (Wind(..), Prevalent(..))
 import Dragon (Dragon(..))
 import Flower (Flower(..))
 import Season (Season(..))
+import Stick (Stick(..))
 
 newtype CssClass = CssClass String
 
@@ -73,3 +74,22 @@ instance CssBind Tile where
         Spring -> "spring"
         Summer -> "summer"
         Autumn -> "autumn"
+
+
+instance CssBind Back where
+  cssClass b = wrap $ "tile " <> case b of
+    Back -> "back"
+
+
+instance CssBind Prevalent where
+  cssClass b = wrap $ "prev prev-" <> case b of
+    PrevalentEast -> "east"
+    PrevalentSouth -> "south"
+
+
+instance CssBind Stick where
+  cssClass b = wrap $ "stick stick-" <> case b of
+    Stick100 -> "100"
+    Stick1000 -> "1000"
+    Stick5000 -> "5000"
+    Stick10000 -> "10000"

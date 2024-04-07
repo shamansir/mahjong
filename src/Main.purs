@@ -10,7 +10,9 @@ import Data.String (joinWith) as String
 import Data.Newtype (unwrap)
 
 import Game (tiles, tilesEx, reds)
-import Tile (Tile, WithRed(..))
+import Tile (Tile, Back(..), WithRed(..))
+import Wind (Prevalent(..))
+import Stick (Stick(..))
 import Game.Pictogram (picto)
 import Game.Hint (hint)
 import Game.Doc (doc)
@@ -44,8 +46,15 @@ main = do
 
     el "hr" [] $ pure unit
 
-    el "div" [ class_ $ "tiles " <> (unwrap $ cssClass SepSVG) ] do
+    el "div" [ class_ $ "tiles " <> (unwrap $ cssClass DesignA ) ] do
       traverse_ tileImg $ tilesEx NoRed <> reds
+      el "span" [ class_ $ unwrap $ cssClass Back ] $ pure unit
+      el "span" [ class_ $ unwrap $ cssClass PrevalentEast ] $ pure unit
+      el "span" [ class_ $ unwrap $ cssClass PrevalentSouth ] $ pure unit
+      el "span" [ class_ $ unwrap $ cssClass Stick100 ] $ pure unit
+      el "span" [ class_ $ unwrap $ cssClass Stick1000 ] $ pure unit
+      el "span" [ class_ $ unwrap $ cssClass Stick5000 ] $ pure unit
+      el "span" [ class_ $ unwrap $ cssClass Stick10000 ] $ pure unit
 
     el "hr" [] $ pure unit
 

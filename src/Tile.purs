@@ -27,6 +27,9 @@ import Season (Season)
 import Season (seasons) as S
 
 
+data Back = Back
+
+
 data SuitValue
   = Value1
   | Value2

@@ -1,18 +1,40 @@
 .set-des-c {
     --offset-x : -5px;
     --offset-y : -30px;
-    --tile-offset-x: -160px;
-    --tile-offset-y: -245px;
+    --tile-offset-x: -159.5px;
+    --tile-offset-y: -243px;
+    --tile-width: 160px;
+    --tile-height: 200px;
+    --wind-width: 240px;
+    --wind-height: 150px;
+    --stick-width: 600px;
+    --stick-height: 75px;
 }
 
 .set-des-c span.tile {
-    width: 160px;
-    height: 200px;
+    width: var(--tile-width);
+    height: var(--tile-height);
     display: inline-block;
     border: 1px solid black;
 }
 
 .set-des-c span.tile {
+    background-image: url('./assets/set_v3.png');
+}
+
+.set-des-c .prev {
+    width: var(--wind-width);
+    height: var(--wind-height);
+    display: inline-block;
+    border: 1px solid black;
+    background-image: url('./assets/set_v3.png');
+}
+
+.set-des-c .stick {
+    width: var(--stick-width);
+    height: var(--stick-height);
+    display: inline-block;
+    border: 1px solid black;
     background-image: url('./assets/set_v3.png');
 }
 
@@ -69,3 +91,11 @@
 .set-des-c .tile.season-spring { background-image: none; }
 .set-des-c .tile.season-summer { background-image: none; }
 .set-des-c .tile.season-autumn { background-image: none; }
+
+.set-des-c .prev-east  { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x) - 30px) calc(var(--offset-y) + 3 * var(--tile-offset-y) - 6px); }
+.set-des-c .prev-south { background-position: calc(var(--offset-x) + 8 * var(--tile-offset-x) - 30px) calc(var(--offset-y) + 3 * var(--tile-offset-y) - 6px - var(--wind-height) - 10px); }
+
+.set-des-c .stick-10000 { background-position: calc(var(--offset-x) - 5px) calc(var(--offset-y) + 4 * var(--tile-offset-y)); }
+.set-des-c .stick-5000  { background-position: calc(var(--offset-x) - 5px) calc(var(--offset-y) + 4 * var(--tile-offset-y) - var(--stick-height) - 17px); }
+.set-des-c .stick-1000  { background-position: calc(var(--offset-x) - 5px - var(--stick-width) - 10px) calc(var(--offset-y) + 4 * var(--tile-offset-y)); }
+.set-des-c .stick-100   { background-position: calc(var(--offset-x)  - 5px - var(--stick-width) - 10px) calc(var(--offset-y) + 4 * var(--tile-offset-y) - var(--stick-height) - 17px); }

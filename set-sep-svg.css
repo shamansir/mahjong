@@ -5,7 +5,8 @@
     --tile-offset-y: -245px;
 }
 
-.set-sep-svg span.tile {
+.set-sep-svg span.tile,
+.set-sep-svg span.prev {
     width: 160px;
     height: 200px;
     display: inline-block;
@@ -37,14 +38,14 @@
 .set-sep-svg .bamboos-5-red { background-image: url('./assets/SVG1/Regular/Sou5-Dora.svg'); }
 
 .set-sep-svg .chars-1 { background-image: url('./assets/SVG1/Regular/Man1.svg'); }
-.set-sep-svg .chars-2 { background-image: url('./assets/SVG1/Regular/Man1.svg'); }
-.set-sep-svg .chars-3 { background-image: url('./assets/SVG1/Regular/Man1.svg'); }
-.set-sep-svg .chars-4 { background-image: url('./assets/SVG1/Regular/Man1.svg'); }
-.set-sep-svg .chars-5 { background-image: url('./assets/SVG1/Regular/Man1.svg'); }
-.set-sep-svg .chars-6 { background-image: url('./assets/SVG1/Regular/Man1.svg'); }
-.set-sep-svg .chars-7 { background-image: url('./assets/SVG1/Regular/Man1.svg'); }
-.set-sep-svg .chars-8 { background-image: url('./assets/SVG1/Regular/Man1.svg'); }
-.set-sep-svg .chars-9 { background-image: url('./assets/SVG1/Regular/Man1.svg'); }
+.set-sep-svg .chars-2 { background-image: url('./assets/SVG1/Regular/Man2.svg'); }
+.set-sep-svg .chars-3 { background-image: url('./assets/SVG1/Regular/Man3.svg'); }
+.set-sep-svg .chars-4 { background-image: url('./assets/SVG1/Regular/Man4.svg'); }
+.set-sep-svg .chars-5 { background-image: url('./assets/SVG1/Regular/Man5.svg'); }
+.set-sep-svg .chars-6 { background-image: url('./assets/SVG1/Regular/Man6.svg'); }
+.set-sep-svg .chars-7 { background-image: url('./assets/SVG1/Regular/Man7.svg'); }
+.set-sep-svg .chars-8 { background-image: url('./assets/SVG1/Regular/Man8.svg'); }
+.set-sep-svg .chars-9 { background-image: url('./assets/SVG1/Regular/Man9.svg'); }
 .set-sep-svg .chars-5-red { background-image: url('./assets/SVG1/Regular/Man5-Dora.svg'); }
 
 .set-sep-svg .wind-east  { background-image: url('./assets/SVG1/Regular/Ton.svg'); }
@@ -67,3 +68,11 @@
 .set-sep-svg .tile.season-spring { background-image: url('./assets/SVG1/Regular/Season2.svg'); }
 .set-sep-svg .tile.season-summer { background-image: url('./assets/SVG1/Regular/Season3.svg'); }
 .set-sep-svg .tile.season-autumn { background-image: url('./assets/SVG1/Regular/Season4.svg'); }
+
+.set-sep-svg .prev-east  { background-image: none; }
+.set-sep-svg .prev-south { background-image: none; }
+
+.set-sep-svg .stick-100   { background-image: none; }
+.set-sep-svg .stick-1000  { background-image: none; }
+.set-sep-svg .stick-5000  { background-image: none; }
+.set-sep-svg .stick-10000 { background-image: none; }
