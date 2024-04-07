@@ -19,7 +19,7 @@ import Game.Doc (doc)
 
 import Render.CssBind (cssClass, DesignSet(..))
 
-import Specular.Dom.Element (attr,  class_, dynText, el, onClick_, text, el')
+import Specular.Dom.Element (attr,  class_, dynText, el, onClick_, text, el', classesD)
 import Specular.Dom.Widget (runMainWidgetInBody)
 import Specular.Ref (Ref)
 import Specular.Ref as Ref
@@ -29,26 +29,44 @@ main :: Effect Unit
 main = do
   -- | Will append widget to the body
   runMainWidgetInBody do
-    counter :: Ref Int <- Ref.new 0
+    tileDesign :: Ref DesignSet <- Ref.new SepPNG
+    thingsDesign :: Ref DesignSet <- Ref.new DesignA
     -- | Subtract 1 from counter value
-    let subtractCb = Ref.modify counter (add (negate 1))
+    let curTileDesign = Ref.value tileDesign
+    let curThingsDesign = Ref.value thingsDesign
+    let setTileDesign = Ref.modify tileDesign <<< const
+    let setThingsDesign = Ref.modify thingsDesign <<< const
 
     -- | Add 1 to counter value
-    let addCb = Ref.modify counter (add 1)
 
-    el "button" [class_ "btn", attr "type" "button", onClick_ addCb ] do
-      text "+"
+    el "div" [ ] do
+      traverse_ (\d -> designButton (setTileDesign d) (designName d)) $ [ Colored, SepSVG, SepPNG, BlackWhite, DesignA, DesignC ]
+    br
 
-    dynText $ show <$> Ref.value counter
 
-    el "button" [class_ "btn", attr "type" "button", onClick_ subtractCb ] do
-      text "-"
+    text "Tiles: "
+    br
 
-    el "hr" [] $ pure unit
+    dynText $ designName <$> curTileDesign
+    br
 
-    el "div" [ class_ $ "tiles " <> (unwrap $ cssClass DesignA ) ] do
+    hr
+
+    el "div" [ classesD (toTilesClasses <$> curTileDesign) ] do
       traverse_ tileImg $ tilesEx NoRed <> reds
       el "span" [ class_ $ unwrap $ cssClass Back ] $ pure unit
+
+    hr
+
+    text "Things: "
+    br
+    dynText $ designName <$> curThingsDesign
+    br
+
+    el "div" [ ] do
+      traverse_ (\d -> designButton (setThingsDesign d) (designName d)) $ [ DesignA, DesignC ]
+
+    el "div" [ classesD (toThingsClasses <$> curThingsDesign) ] do
       el "span" [ class_ $ unwrap $ cssClass PrevalentEast ] $ pure unit
       el "span" [ class_ $ unwrap $ cssClass PrevalentSouth ] $ pure unit
       el "span" [ class_ $ unwrap $ cssClass Stick100 ] $ pure unit
@@ -56,17 +74,30 @@ main = do
       el "span" [ class_ $ unwrap $ cssClass Stick5000 ] $ pure unit
       el "span" [ class_ $ unwrap $ cssClass Stick10000 ] $ pure unit
 
-    el "hr" [] $ pure unit
+    hr
 
     el "textarea" [ class_ "list" ] do
       text $ String.joinWith "\n" $ tileOneLiner <$> tilesEx NoRed
 
-    el "hr" [] $ pure unit
+    hr
 
     el "span" [] do
       text $ show $ Array.length $ tiles NoRed
 
   where
+    br = el "br" [] $ pure unit
+    hr = el "hr" [] $ pure unit
+    toTilesClasses cs = [ "tiles", unwrap $ cssClass cs ]
+    toThingsClasses cs = [ "tiles", unwrap $ cssClass cs ]
+    designName = case _ of
+      Colored -> "Colored"
+      SepSVG -> "Sep. SVG"
+      SepPNG -> "Sep. PNG"
+      BlackWhite -> "Black & White"
+      DesignA -> "Design A"
+      DesignC -> "Design C"
+    designButton ds name = el "button" [class_ "btn", attr "type" "button", onClick_ ds ] do text name
+
     tileImg tile = el "span" [ class_ $ unwrap $ cssClass tile ] $ pure unit
 
     tileOneLiner :: Tile -> String
